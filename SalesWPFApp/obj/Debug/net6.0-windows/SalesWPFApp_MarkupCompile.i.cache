@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 D:\FPT\Term 7\PRN221\Projects\Ass01Solution\SalesWPFApp\App.xaml
-5-1732345773
+10268651337
 
-927290674
+14-216877183
 222-792155635
-MainWindow.xaml;WindowLogin.xaml;WindowMembers.xaml;WindowOrders.xaml;WindowProducts.xaml;
+AdminMemberCreateWindow.xaml;AdminMemberPage.xaml;AdminProductCreateWindow.xaml;AdminProductPage.xaml;AdminWindow.xaml;MainWindow.xaml;WindowLogin.xaml;WindowMembers.xaml;WindowOrders.xaml;WindowProducts.xaml;
 
 True
 

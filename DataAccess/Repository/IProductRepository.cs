@@ -1,4 +1,5 @@
 ﻿using BusinessObject.Models;
+using DataAccess.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,5 +17,6 @@ namespace DataAccess.Repository
         void UpdateProduct(Product product);
         void DeleteProduct(Product product);
         Product GetProductById(int productId);
+        IEnumerable<Product> GetProductsByFilter(ProductFilter filter);
     }
 }

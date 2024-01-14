@@ -1,4 +1,5 @@
 ﻿using BusinessObject.Models;
+using DataAccess.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,8 @@ namespace DataAccess.Repository
         public IEnumerable<Product> GetProductsByQuantity(int unit) => ProductDAO.Instance.GetProductsByUnitInStock(unit);
 
         public void UpdateProduct(Product product) => ProductDAO.Instance.UpdateProduct(product);
+
+        public IEnumerable<Product> GetProductsByFilter(ProductFilter filter) => ProductDAO.Instance.GetProductsByFilter(filter);
 
     }
 }

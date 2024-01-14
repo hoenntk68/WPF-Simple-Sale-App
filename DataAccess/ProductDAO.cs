@@ -1,7 +1,9 @@
 ﻿using BusinessObject.Models;
+using DataAccess.Model;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -170,8 +172,34 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                 throw new Exception(ex.Message);
+                throw new Exception(ex.Message);
             }
+        }
+
+        public IEnumerable<Product> GetProductsByFilter(ProductFilter filter)
+        {
+            if (filter != null)
+            {
+                List<Product> productList;
+                try
+                {
+                    using (var ctx = new WPF_Sale_ManagerContext())
+                    {
+                        productList = ctx.Products
+                            .Where(product =>   (filter.ProductId == null || product.ProductId.Equals(filter.ProductId)) &&
+                                                (filter.ProductName == null || product.ProductName.ToLower().Contains(filter.ProductName.ToLower())) &&
+                                                (filter.UnitPrice == null || product.UnitPrice.Equals(filter.UnitPrice)) &&
+                                                (filter.CategoryId == null || product.CategoryId.Equals(filter.CategoryId)) &&
+                                                (filter.UnitsInStock == null || product.UnitsInStock.Equals(filter.UnitsInStock))).ToList();
+                        return productList;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
+            return GetAllProducts();
         }
     }
 }

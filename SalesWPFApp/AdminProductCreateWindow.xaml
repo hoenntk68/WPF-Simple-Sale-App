@@ -1,0 +1,63 @@
+﻿<Window x:Class="SalesWPFApp.AdminProductCreateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SalesWPFApp"
+        mc:Ignorable="d"
+        Title="AdminProductCreateWindow" Height="450" Width="900"
+        Loaded="Window_Loaded">
+    <Grid>
+        <StackPanel>
+            <TextBlock Margin="0 10 0 20" 
+                       FontWeight="Light" 
+                       FontSize="20" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Top">
+              New Product
+            </TextBlock>
+            
+            <StackPanel Background="white" 
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Center" 
+                        Width="300">
+                <Label Content="Id" 
+                       x:Name="labelId" 
+                       Visibility="Collapsed" 
+                       IsEnabled="False"/>
+                <TextBox x:Name="txtBoxId" 
+                         Margin="0 0 0 5" 
+                         Visibility="Collapsed" 
+                         IsEnabled="False"/>
+                
+                <Label Content="Name"/>
+                <TextBox x:Name="txtBoxName" 
+                         Margin="0 0 0 5"/>
+                
+                <Label Content="Weight"/>
+                <TextBox x:Name="txtBoxWeight" 
+                         Margin="0 0 0 5"/>
+                
+                <Label Content="CategoryId"/>
+                <TextBox x:Name="txtBoxCategory" 
+                         Margin="0 0 0 5"/>
+                
+                <Label Content="UnitPrice"/>
+                <TextBox x:Name="txtBoxUnitPrice" 
+                         Margin="0 0 0 5"/>
+                
+                <Label Content="UnitInStock"/>
+                <TextBox x:Name="txtBoxUnitInStock" 
+                         Margin="0 0 0 5"/>
+                
+                <Button x:Name="btn" 
+                        Content="Add"
+                        Width="100"
+                        Height="Auto"
+                        Margin="0 10 0 5" 
+                        Click="Button_Click"
+                        ></Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -68,3 +68,13 @@ D:\FPT\Term 7\PRN221\Projects\Ass01Solution\SalesWPFApp\obj\Debug\net6.0-windows
 D:\FPT\Term 7\PRN221\Projects\Ass01Solution\SalesWPFApp\obj\Debug\net6.0-windows\SalesWPFApp.genruntimeconfig.cache
 D:\FPT\Term 7\PRN221\Projects\Ass01Solution\SalesWPFApp\obj\Debug\net6.0-windows\ref\SalesWPFApp.dll
 D:\FPT\Term 7\PRN221\Projects\Ass01Solution\SalesWPFApp\bin\Debug\net6.0-windows\appsettings.json
+D:\FPT\Term 7\PRN221\Projects\Ass01Solution\SalesWPFApp\obj\Debug\net6.0-windows\AdminProductPage.g.cs
+D:\FPT\Term 7\PRN221\Projects\Ass01Solution\SalesWPFApp\obj\Debug\net6.0-windows\AdminWindow.g.cs
+D:\FPT\Term 7\PRN221\Projects\Ass01Solution\SalesWPFApp\obj\Debug\net6.0-windows\AdminProductPage.baml
+D:\FPT\Term 7\PRN221\Projects\Ass01Solution\SalesWPFApp\obj\Debug\net6.0-windows\AdminWindow.baml
+D:\FPT\Term 7\PRN221\Projects\Ass01Solution\SalesWPFApp\obj\Debug\net6.0-windows\AdminProductCreateWindow.g.cs
+D:\FPT\Term 7\PRN221\Projects\Ass01Solution\SalesWPFApp\obj\Debug\net6.0-windows\AdminProductCreateWindow.baml
+D:\FPT\Term 7\PRN221\Projects\Ass01Solution\SalesWPFApp\obj\Debug\net6.0-windows\AdminMemberCreateWindow.g.cs
+D:\FPT\Term 7\PRN221\Projects\Ass01Solution\SalesWPFApp\obj\Debug\net6.0-windows\AdminMemberPage.g.cs
+D:\FPT\Term 7\PRN221\Projects\Ass01Solution\SalesWPFApp\obj\Debug\net6.0-windows\AdminMemberCreateWindow.baml
+D:\FPT\Term 7\PRN221\Projects\Ass01Solution\SalesWPFApp\obj\Debug\net6.0-windows\AdminMemberPage.baml

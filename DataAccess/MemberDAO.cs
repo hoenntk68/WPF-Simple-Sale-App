@@ -1,4 +1,5 @@
 ﻿using BusinessObject.Models;
+using DataAccess.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -144,6 +145,32 @@ namespace DataAccess
             {
                 throw new Exception(ex.Message);
             }
+        }
+
+        public IEnumerable<Member> FindAllBy(MemberFilter filter)
+        {
+            if (filter != null)
+            {
+                List<Member> memberList;
+                try
+                {
+                    using (var ctx = new WPF_Sale_ManagerContext())
+                    {
+                        memberList = ctx.Members
+                            .Where(member => (filter.MemberId == null || member.MemberId.Equals(filter.MemberId)) &&
+                                                (filter.Email == null || member.Email.ToLower().Contains(filter.Email.ToLower())) &&
+                                                (filter.CompanyName == null || member.CompanyName.Equals(filter.CompanyName)) &&
+                                                (filter.City == null || member.City.Equals(filter.City)) &&
+                                                (filter.Country == null || member.Country.Equals(filter.Country))).ToList();
+                        return memberList;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
+            return GetAllMembers();
         }
     }
 }

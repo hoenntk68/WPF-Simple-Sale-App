@@ -1,4 +1,5 @@
 ﻿using BusinessObject.Models;
+using DataAccess.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,5 +21,7 @@ namespace DataAccess.Repository
         public Member GetMemberById(int id) => MemberDAO.Instance.getMemberById(id);
 
         public void UpdateMember(Member member) => MemberDAO.Instance.UpdateMember(member);
+
+        public IEnumerable<Member> FindAllBy(MemberFilter filter) => MemberDAO.Instance.FindAllBy(filter);
     }
 }

@@ -46,8 +46,10 @@ namespace SalesWPFApp
             {
                 if (email.Equals(admin["email"]) && password.Equals(admin["password"]))
                 {
-                    WindowProducts windowProducts = new WindowProducts(_productRepository, _memberRepository, _orderRepository);
-                    windowProducts.Show();
+                    AdminWindow adminWindow = new AdminWindow(_productRepository, _memberRepository, _orderRepository);
+                    adminWindow.Show();
+                    //WindowProducts windowProducts = new WindowProducts(productRepository, memberRepository, orderRepository);
+                    //windowProducts.Show();
                     this.Close();
                 }
                 else
