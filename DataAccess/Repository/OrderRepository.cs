@@ -1,4 +1,5 @@
 ﻿using BusinessObject.Models;
+using DataAccess.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +15,8 @@ namespace DataAccess.Repository
         public IEnumerable<Order> GetAllOrders() => OrderDAO.Instance.GetAllOrders();
         public Order GetOrderById(int id) => OrderDAO.Instance.GetOrderById(id);
         public IEnumerable<Order> GetOrdersByDate(DateTime startDate, DateTime endDate) => OrderDAO.Instance.GetOrderByDate(startDate, endDate);
-
         public IEnumerable<Order> GetOrdersByUser(string email) => OrderDAO.Instance.GetOrderByEmail(email);
-
         public void UpdateOrder(Order order) => OrderDAO.Instance.UpdateOrder(order);
+        public IEnumerable<Order> FindAllBy(OrderFilter filter) => OrderDAO.Instance.FindAllBy(filter);
     }
 }

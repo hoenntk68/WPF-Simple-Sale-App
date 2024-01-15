@@ -1,4 +1,5 @@
 ﻿using BusinessObject.Models;
+using DataAccess.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,5 +17,6 @@ namespace DataAccess.Repository
         void AddOrder(Order order);
         void UpdateOrder(Order order);
         void DeleteOrder(Order order);
+        IEnumerable<Order> FindAllBy(OrderFilter filter);
     }
 }

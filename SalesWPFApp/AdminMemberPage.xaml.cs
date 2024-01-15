@@ -92,10 +92,10 @@ namespace SalesWPFApp
         private void Button_Search(object sender, RoutedEventArgs e)
         {
             int? id = !String.IsNullOrEmpty(txtId.Text) ? int.Parse(txtId.Text) : null;
-            string email = txtEmail.Text;
-            string companyName = txtCompanyName.Text;
-            string city = txtCity.Text;
-            string country = txtCountry.Text;
+            string? email = !String.IsNullOrEmpty(txtEmail.Text) ? txtEmail.Text : null;
+            string? companyName = !String.IsNullOrEmpty(txtCompanyName.Text) ? txtCompanyName.Text : null;
+            string? city = !String.IsNullOrEmpty(txtCity.Text) ? txtCity.Text : null;
+            string? country = !String.IsNullOrEmpty(txtCountry.Text) ? txtCountry.Text : null;
 
             MemberFilter memberFilter = new MemberFilter();
             memberFilter.MemberId = id;

@@ -56,6 +56,8 @@ namespace SalesWPFApp
 
         private void Goto_AdminOrder(object sender, RoutedEventArgs e)
         {
+            AdminOrderPage adminOrderPage = new AdminOrderPage(orderRepository);
+            frameMain.Content = adminOrderPage;
         }
     }
 }

@@ -78,7 +78,6 @@
                         Reload
                     </Button>
                     <Button x:Name="btnDelete" 
-                            IsEnabled="False"
                             Width="80"
                             Height="30"
                             Padding="5 4" 
@@ -88,7 +87,6 @@
                         Delete
                     </Button>
                     <Button x:Name="btnEdit"
-                            IsEnabled="False"
                             Width="80" 
                             Height="30"
                             Padding="5 4" 
@@ -108,7 +106,13 @@
                 </StackPanel>
             </StackPanel>
             <Grid>
-                <ListView MaxHeight="400" x:Name="listView" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="False" Width="auto" Grid.Column="0" SizeChanged="ListView_SizeChanged">
+                <ListView x:Name="listView" 
+                          MaxHeight="400" 
+                          ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                          ScrollViewer.CanContentScroll="False" 
+                          Width="auto" 
+                          Grid.Column="0" 
+                          SizeChanged="ListView_SizeChanged">
                     <!--<ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem">
                             <Setter Property="HorizontalContentAlignment" Value="Center" />

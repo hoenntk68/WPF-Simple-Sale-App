@@ -78,3 +78,5 @@ D:\FPT\Term 7\PRN221\Projects\Ass01Solution\SalesWPFApp\obj\Debug\net6.0-windows
 D:\FPT\Term 7\PRN221\Projects\Ass01Solution\SalesWPFApp\obj\Debug\net6.0-windows\AdminMemberPage.g.cs
 D:\FPT\Term 7\PRN221\Projects\Ass01Solution\SalesWPFApp\obj\Debug\net6.0-windows\AdminMemberCreateWindow.baml
 D:\FPT\Term 7\PRN221\Projects\Ass01Solution\SalesWPFApp\obj\Debug\net6.0-windows\AdminMemberPage.baml
+D:\FPT\Term 7\PRN221\Projects\Ass01Solution\SalesWPFApp\obj\Debug\net6.0-windows\AdminOrderPage.g.cs
+D:\FPT\Term 7\PRN221\Projects\Ass01Solution\SalesWPFApp\obj\Debug\net6.0-windows\AdminOrderPage.baml

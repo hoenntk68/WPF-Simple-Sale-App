@@ -33,6 +33,7 @@ namespace SalesWPFApp
             services.AddSingleton<WindowMembers>();
             services.AddSingleton<WindowOrders>();
             services.AddSingleton<WindowProducts>();
+            services.AddSingleton<AdminWindow>();
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<IMemberRepository, MemberRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
@@ -40,7 +41,8 @@ namespace SalesWPFApp
 
         private void OnStartUp(object sender, StartupEventArgs e)
         {
-            var login = _serviceProvider.GetService<WindowLogin>();
+            //var login = _serviceProvider.GetService<WindowLogin>();
+            var login = _serviceProvider.GetService<AdminWindow>();
             login.Show();
         }
     }

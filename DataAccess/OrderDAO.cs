@@ -1,7 +1,10 @@
 ﻿using BusinessObject.Models;
+using DataAccess.Model;
+using DataAccess.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -162,6 +165,28 @@ namespace DataAccess
             {
                 throw new Exception(ex.Message);
             }
+        }
+
+        public IEnumerable<Order> FindAllBy(OrderFilter filter)
+        {
+            if (filter != null)
+            {
+                IEnumerable<Order> orderList = OrderDAO.Instance.FindAll(order => (filter.StartDate == null || order.OrderDate >= filter.StartDate) &&
+                                                              (filter.EndDate == null || order.OrderDate <= filter.EndDate) ||
+                                                              (filter.StartDate != null && filter.EndDate != null && order.OrderDate >= filter.StartDate && order.OrderDate <= filter.EndDate)).OrderByDescending(order => order.OrderDate).ToList();
+                return orderList;
+            }
+            return GetAllOrders();
+        }
+
+        public IEnumerable<Order> FindAll(Expression<Func<Order, bool>> predicate)
+        {
+            List<Order> orders = new List<Order>();
+            using (var saleManagerContext = new WPF_Sale_ManagerContext())
+            {
+                orders = saleManagerContext.Orders.Where(predicate).ToList();
+            }
+            return orders;
         }
     }
 }
