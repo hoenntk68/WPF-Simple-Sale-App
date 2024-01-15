@@ -41,8 +41,8 @@ namespace SalesWPFApp
 
         private void OnStartUp(object sender, StartupEventArgs e)
         {
-            //var login = _serviceProvider.GetService<WindowLogin>();
-            var login = _serviceProvider.GetService<AdminWindow>();
+            var login = _serviceProvider.GetService<WindowLogin>();
+            //var login = _serviceProvider.GetService<AdminWindow>();
             login.Show();
         }
     }

@@ -36,6 +36,12 @@ namespace SalesWPFApp
             InitializeComponent();
         }
 
+        public void resetFormLogin()
+        {
+            txtEmail.Text = null;
+            txtPassword.Password = null;
+        }
+
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             string email = txtEmail.Text;
@@ -46,11 +52,11 @@ namespace SalesWPFApp
             {
                 if (email.Equals(admin["email"]) && password.Equals(admin["password"]))
                 {
-                    AdminWindow adminWindow = new AdminWindow(_productRepository, _memberRepository, _orderRepository);
+                    AdminWindow adminWindow = new AdminWindow(_productRepository, _memberRepository, _orderRepository, this);
                     adminWindow.Show();
                     //WindowProducts windowProducts = new WindowProducts(productRepository, memberRepository, orderRepository);
                     //windowProducts.Show();
-                    this.Close();
+                    this.Hide();
                 }
                 else
                 {
@@ -66,6 +72,7 @@ namespace SalesWPFApp
                         MessageBox.Show("Wrong Email or Password");
                     }
                 }
+                resetFormLogin();
             }
             else
             {

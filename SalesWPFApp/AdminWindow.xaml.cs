@@ -23,23 +23,26 @@ namespace SalesWPFApp
         private readonly IMemberRepository memberRepository;
         private readonly IProductRepository productRepository;
         private readonly IOrderRepository orderRepository;
+        private readonly WindowLogin windowLogin;
 
         //public AdminWindow()
         //{
         //    InitializeComponent();
         //}
 
-        public AdminWindow(IProductRepository productRepository, IMemberRepository memberRepository, IOrderRepository orderRepository)
+        public AdminWindow(IProductRepository productRepository, IMemberRepository memberRepository, IOrderRepository orderRepository, WindowLogin windowLogin)
         {
             this.productRepository = productRepository;
             this.memberRepository = memberRepository;
             this.orderRepository = orderRepository;
+            this.windowLogin = windowLogin;
             InitializeComponent();
         }
 
         private void Button_Logout(object sender, RoutedEventArgs e)
         {
-
+            windowLogin.Show();
+            this.Close();
         }
 
         private void Goto_AdminProduct(object sender, RoutedEventArgs e)
