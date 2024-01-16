@@ -11,10 +11,22 @@
             <Grid DockPanel.Dock="Top" Height="40">
                 <Border Padding="10 0">
                     <DockPanel VerticalAlignment="Center" HorizontalAlignment="Stretch">
-                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                            <!--<Image Source="Resource/logo/logo.png" Width="50" Height="30" Margin="0 0 5 0"></Image>-->
-                            <!--<TextBlock VerticalAlignment="Center" Style="{StaticResource ResourceKey=headingSecorndary}">FStore</TextBlock>-->
-                        </StackPanel>
+                        <!--<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <Image Source="https://e7.pngegg.com/pngimages/1016/542/png-clipart-black-house-house-computer-icons-home-automation-kits-real-estate-home-icon-angle-building.png" Width="50" Height="30" Margin="0 0 5 0"></Image>
+                            <TextBlock VerticalAlignment="Center">FStore</TextBlock>
+                        </StackPanel>-->
+                        <Button HorizontalAlignment="Right"
+                                        Background="Transparent" 
+                                        BorderThickness="0" 
+                                        Margin="20 0 0 0" 
+                                        Click="Goto_Home">
+                            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Image Source="https://e7.pngegg.com/pngimages/1016/542/png-clipart-black-house-house-computer-icons-home-automation-kits-real-estate-home-icon-angle-building.png" 
+                                       Height="30" 
+                                       Width="30">
+                                </Image>
+                            </Grid>
+                        </Button>
                         <Button Content="Logout" Background="Transparent" BorderThickness="0" Width="50" HorizontalAlignment="Right" Click="Button_Logout"/>
                     </DockPanel>
                 </Border>

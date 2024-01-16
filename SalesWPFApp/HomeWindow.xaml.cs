@@ -26,13 +26,13 @@ namespace SalesWPFApp
         private readonly IProductRepository productRepository;
         private readonly IOrderRepository orderRepository;
         private readonly IMemberRepository memberRepository;
-        private readonly WindowLogin mainWindow;
+        private readonly WindowLogin loginWindow;
 
         public HomeWindow(WindowLogin _mainWindow, IProductRepository _productRepository, IOrderRepository _orderRepository, IMemberRepository _memberRepository)
         {
             InitializeComponent();
             Closing += Home_Closing;
-            this.mainWindow = _mainWindow;
+            this.loginWindow = _mainWindow;
             this.productRepository = _productRepository;
             this.orderRepository = _orderRepository;
             this.memberRepository = _memberRepository;
@@ -43,7 +43,7 @@ namespace SalesWPFApp
 
         private void Home_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            mainWindow.Show();
+            loginWindow.Show();
         }
 
         private void Button_Search(object sender, RoutedEventArgs e)

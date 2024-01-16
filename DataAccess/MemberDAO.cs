@@ -177,8 +177,20 @@ namespace DataAccess
         {
             MemberFilter filter = new MemberFilter();
             filter.Email = email;
-            List<Member> memberfound = FindAllBy(filter).ToList();
-                return memberfound.FirstOrDefault();
+            Member? member;
+            try
+            {
+                using (var ctx = new WPF_Sale_ManagerContext())
+                {
+                    member = ctx.Members
+                        .Where(m => m.Email == email).FirstOrDefault();
+                    return member;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
     }
 }

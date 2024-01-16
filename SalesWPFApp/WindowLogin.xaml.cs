@@ -50,6 +50,7 @@ namespace SalesWPFApp
 
             if (email != null && password != null)
             {
+                Session.Username = email;
                 if (email.Equals(admin["email"]) && password.Equals(admin["password"]))
                 {
                     AdminWindow adminWindow = new AdminWindow(productRepository, memberRepository, orderRepository, this);

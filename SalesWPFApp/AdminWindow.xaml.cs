@@ -62,5 +62,11 @@ namespace SalesWPFApp
             AdminOrderPage adminOrderPage = new AdminOrderPage(orderRepository);
             frameMain.Content = adminOrderPage;
         }
+        private void Goto_Home(object sender, RoutedEventArgs e)
+        {
+            HomeWindow home = new HomeWindow(windowLogin, productRepository, orderRepository, memberRepository); 
+            this.Hide();
+            home.Show();
+        }
     }
 }
