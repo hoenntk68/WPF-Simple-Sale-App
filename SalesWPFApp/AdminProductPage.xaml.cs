@@ -164,7 +164,7 @@ namespace SalesWPFApp
             productFilter.UnitsInStock = unitsInStock;
             productFilter.CategoryId = categoryId;
 
-            ListView.ItemsSource = productRepository.GetProductsByFilter(productFilter);
+            ListView.ItemsSource = productRepository.FindAllBy(productFilter);
         }
     }
 }

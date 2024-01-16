@@ -23,5 +23,7 @@ namespace DataAccess.Repository
         public void UpdateMember(Member member) => MemberDAO.Instance.UpdateMember(member);
 
         public IEnumerable<Member> FindAllBy(MemberFilter filter) => MemberDAO.Instance.FindAllBy(filter);
+
+        public Member? FindByEmail(string email) => MemberDAO.Instance.FindByEmail(email);
     }
 }

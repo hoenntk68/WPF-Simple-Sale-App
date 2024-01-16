@@ -24,15 +24,15 @@ namespace SalesWPFApp
     /// </summary>
     public partial class WindowLogin : Window
     {
-        private readonly IMemberRepository _memberRepository;
-        private readonly IProductRepository _productRepository;
-        private readonly IOrderRepository _orderRepository;
+        private readonly IMemberRepository memberRepository;
+        private readonly IProductRepository productRepository;
+        private readonly IOrderRepository orderRepository;
 
         public WindowLogin(IProductRepository productRepository, IMemberRepository memberRepository, IOrderRepository orderRepository)
         {
-            _productRepository = productRepository;
-            _memberRepository = memberRepository;
-            _orderRepository = orderRepository;
+            this.productRepository = productRepository;
+            this.memberRepository = memberRepository;
+            this.orderRepository = orderRepository;
             InitializeComponent();
         }
 
@@ -52,7 +52,7 @@ namespace SalesWPFApp
             {
                 if (email.Equals(admin["email"]) && password.Equals(admin["password"]))
                 {
-                    AdminWindow adminWindow = new AdminWindow(_productRepository, _memberRepository, _orderRepository, this);
+                    AdminWindow adminWindow = new AdminWindow(productRepository, memberRepository, orderRepository, this);
                     adminWindow.Show();
                     //WindowProducts windowProducts = new WindowProducts(productRepository, memberRepository, orderRepository);
                     //windowProducts.Show();
@@ -60,12 +60,13 @@ namespace SalesWPFApp
                 }
                 else
                 {
-                    Member member = _memberRepository.GetMemberByEmail(email, password);
+                    Member member = memberRepository.GetMemberByEmail(email, password);
                     if (member != null)
                     {
+                        Session.Username = email;
                         Hide();
-                        WindowMembers windowMembers = new WindowMembers(_productRepository, _memberRepository, _orderRepository);
-                        windowMembers.Show();
+                        HomeWindow homeWindow = new HomeWindow(this, productRepository, orderRepository, memberRepository);
+                        homeWindow.Show();
                     }
                     else
                     {

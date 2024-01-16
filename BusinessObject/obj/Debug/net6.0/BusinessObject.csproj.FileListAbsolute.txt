@@ -1,3 +1,4 @@
+D:\FPT\Term 7\PRN221\Projects\Ass01Solution\BusinessObject\bin\Debug\net6.0\appsettings.json
 D:\FPT\Term 7\PRN221\Projects\Ass01Solution\BusinessObject\bin\Debug\net6.0\BusinessObject.deps.json
 D:\FPT\Term 7\PRN221\Projects\Ass01Solution\BusinessObject\bin\Debug\net6.0\BusinessObject.runtimeconfig.json
 D:\FPT\Term 7\PRN221\Projects\Ass01Solution\BusinessObject\bin\Debug\net6.0\BusinessObject.dll
@@ -12,4 +13,3 @@ D:\FPT\Term 7\PRN221\Projects\Ass01Solution\BusinessObject\obj\Debug\net6.0\refi
 D:\FPT\Term 7\PRN221\Projects\Ass01Solution\BusinessObject\obj\Debug\net6.0\BusinessObject.pdb
 D:\FPT\Term 7\PRN221\Projects\Ass01Solution\BusinessObject\obj\Debug\net6.0\BusinessObject.genruntimeconfig.cache
 D:\FPT\Term 7\PRN221\Projects\Ass01Solution\BusinessObject\obj\Debug\net6.0\ref\BusinessObject.dll
-D:\FPT\Term 7\PRN221\Projects\Ass01Solution\BusinessObject\bin\Debug\net6.0\appsettings.json

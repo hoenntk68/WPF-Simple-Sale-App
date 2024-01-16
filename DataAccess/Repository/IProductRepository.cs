@@ -17,6 +17,6 @@ namespace DataAccess.Repository
         void UpdateProduct(Product product);
         void DeleteProduct(Product product);
         Product GetProductById(int productId);
-        IEnumerable<Product> GetProductsByFilter(ProductFilter filter);
+        IEnumerable<Product> FindAllBy(ProductFilter filter);
     }
 }

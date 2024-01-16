@@ -24,7 +24,7 @@ namespace DataAccess.Repository
 
         public void UpdateProduct(Product product) => ProductDAO.Instance.UpdateProduct(product);
 
-        public IEnumerable<Product> GetProductsByFilter(ProductFilter filter) => ProductDAO.Instance.GetProductsByFilter(filter);
+        public IEnumerable<Product> FindAllBy(ProductFilter filter) => ProductDAO.Instance.GetProductsByFilter(filter);
 
     }
 }

@@ -18,5 +18,7 @@ namespace DataAccess.Repository
         public IEnumerable<Order> GetOrdersByUser(string email) => OrderDAO.Instance.GetOrderByEmail(email);
         public void UpdateOrder(Order order) => OrderDAO.Instance.UpdateOrder(order);
         public IEnumerable<Order> FindAllBy(OrderFilter filter) => OrderDAO.Instance.FindAllBy(filter);
+
+        public IEnumerable<Order> FindByEmail(string email) => OrderDAO.Instance.FindByEmail(email);
     }
 }

@@ -172,5 +172,13 @@ namespace DataAccess
             }
             return GetAllMembers();
         }
+
+        public Member? FindByEmail(string email)
+        {
+            MemberFilter filter = new MemberFilter();
+            filter.Email = email;
+            List<Member> memberfound = FindAllBy(filter).ToList();
+                return memberfound.FirstOrDefault();
+        }
     }
 }

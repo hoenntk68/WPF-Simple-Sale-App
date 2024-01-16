@@ -34,6 +34,7 @@ namespace SalesWPFApp
             services.AddSingleton<WindowOrders>();
             services.AddSingleton<WindowProducts>();
             services.AddSingleton<AdminWindow>();
+            services.AddSingleton<CartWindow>();
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<IMemberRepository, MemberRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();

@@ -1,6 +1,7 @@
 ﻿using BusinessObject.Models;
 using DataAccess.Model;
 using DataAccess.Repository;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -187,6 +188,34 @@ namespace DataAccess
                 orders = saleManagerContext.Orders.Where(predicate).ToList();
             }
             return orders;
+        }
+
+        public IEnumerable<Order> FindByEmail(string email)
+        {
+            if (email != null)
+            {
+                List<Order> orders = new List<Order>();
+                using (var ctx = new WPF_Sale_ManagerContext())
+                {
+                    // Find member 
+                    Member? member = ctx.Members
+                        .Include(x => x.Orders)
+                        .Where(x => x.Email == email)
+                        .FirstOrDefault();
+                    if (member != null)
+                    {
+                        orders = member.Orders.ToList();
+                    } else
+                    {
+                        throw new Exception("Email is null");
+                    }
+                    // Find orders
+                }
+                return orders;
+            } else
+            {
+                throw new Exception("Email is null");
+            }
         }
     }
 }

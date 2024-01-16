@@ -18,5 +18,6 @@ namespace DataAccess.Repository
         Member GetMemberById(int id);
         Member GetMemberByEmail(string email, string password);
         public IEnumerable<Member> FindAllBy(MemberFilter filter);
+        Member FindByEmail(string email);
     }
 }

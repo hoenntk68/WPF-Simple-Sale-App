@@ -18,5 +18,6 @@ namespace DataAccess.Repository
         void UpdateOrder(Order order);
         void DeleteOrder(Order order);
         IEnumerable<Order> FindAllBy(OrderFilter filter);
+        IEnumerable<Order> FindByEmail(string email);
     }
 }
